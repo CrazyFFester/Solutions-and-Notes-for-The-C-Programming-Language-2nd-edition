@@ -1,6 +1,10 @@
 # Solutions for  "The C Programming Language 2nd edition"
 
 ![book](Images/book.jpg)
+
+I just started to get acquainted with the C language from this book, so the solutions may not be 
+clean. If you find bugs, I will be glad to get acquainted with them.
+
 ## Chapters:
 
 ### Chapter 1
