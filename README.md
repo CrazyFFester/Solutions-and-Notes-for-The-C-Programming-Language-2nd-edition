@@ -2,6 +2,8 @@
 
 ![book](Images/book.jpg)
 
+## Prologue
+
 I just started to get acquainted with the C language from this book, so the solutions may not be 
 clean. 
 
