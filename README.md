@@ -11,6 +11,11 @@ As I go through the chapters of the book, I will not rewrite the codes so that t
 
 If you find bugs, I will be glad to get acquainted with them.
 
+
+
+
+
+
 ## Chapters:
 
 ### Chapter 1
