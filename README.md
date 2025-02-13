@@ -1,6 +1,6 @@
 # Solutions for  "The C Programming Language 2nd edition"
 
-![book](Images/book)
+![book](Images/book.jpg)
 ## Chapters:
 
 ### Chapter 1
