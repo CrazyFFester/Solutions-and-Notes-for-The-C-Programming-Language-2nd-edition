@@ -2,27 +2,8 @@
 
 ## Chapters:
 
-### Chapter 1:
-
-1. Exercise 1-3
-2. Exercise 1-4
-3. Exercise 1-5
-4. Exercise 1-6
-5. Exercise 1-7
-6. Exercise 1-8
-7. Exercise 1-9
-8. Exercise 1-10
-9. Exercise 1-11
-10. Exercise 1-12
-11. Exercise 1-13 Horizontal
-12. Exercise 1-13 Vertical
-13. Exercise 1-14
-14. Exercise 1-15
-15. Exercise 1-16
-16. Exercise 1-18
-17. Exercise 1-19
-18. Exercise 1-20
-19. Exercise 1-21
-20. Exercise 1-22
-21. Exercise 1-23
-22. Exercise 1-24
+| Chapter   | Description                       | Code                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| --------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Chapter 1 | A tutorial Introduction           | - [Exercise 1-3](Chapter1/1.3.c) <br>- [Exercise 1-4](Chapter1/1.4.c) <br>-  [Exercise 1-5](Chapter1/1.5.c) <br>-  [Exercise 1-6](Chapter1/1.6.c)<br>-  [Exercise 1-7](Chapter1/1.7.c)<br>-  [Exercise 1-8](Chapter1/1.8.c)<br>-  [Exercise 1-9](Chapter1/1.9.c)<br>-  [Exercise 1-10](Chapter1/1.10.c)<br>-  [Exercise 1-11](Chapter1/1.1.c)<br>-  [Exercise 1-12](Chapter1/1.12.c)<br>-  [Exercise 1-13 Horizontal](Chapter1/1.13.h.c)<br>-  [Exercise 1-13 Vertical](Chapter1/1.13.v.c)<br>-  [Exercise 1-14](Chapter1/1.14.c)<br>-  [Exercise 1-15](Chapter1/1.15.c)<br>-  [Exercise 1-16](Chapter1/1.16.c)<br>-  [Exercise 1-18](Chapter1/1.18.c)<br>-  [Exercise 1-19](Chapter1/1.19.c)<br>-  [Exercise 1-20](Chapter1/1.20.c)<br>-  [Exercise 1-21](Chapter1/1.21.c)<br>-  [Exercise 1-22](Chapter1/1.22.c)<br>-  [Exercise 1-23](Chapter1/1.23.c)<br>-  [Exercise 1-24](Chapter1/1.24.c) |
+| Chapter 2 | Types, Operators, and Expressions |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|           |                                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
