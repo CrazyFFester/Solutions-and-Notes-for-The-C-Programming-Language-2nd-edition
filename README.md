@@ -1,5 +1,6 @@
-# Solutions of  "The C programming language"
+# Solutions for  "The C Programming Language 2nd edition"
 
+![[51EyaJeebHL._AC_UF1000,1000_QL80_.jpg]]
 ## Chapters:
 
 ### Chapter 1
