@@ -3,7 +3,11 @@
 ![book](Images/book.jpg)
 
 I just started to get acquainted with the C language from this book, so the solutions may not be 
-clean. If you find bugs, I will be glad to get acquainted with them.
+clean. 
+
+As I go through the chapters of the book, I will not rewrite the codes so that the reader and I have more or less the same knowledge.
+
+If you find bugs, I will be glad to get acquainted with them.
 
 ## Chapters:
 
