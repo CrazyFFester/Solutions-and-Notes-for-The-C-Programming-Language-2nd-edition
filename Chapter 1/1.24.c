@@ -9,16 +9,16 @@ int current_char;
 int real_size_of_lines;
 char paired_symbols[MAX_CHAR];
 int real_size_of_paired_symbols = 0;
-int current_paired_symbol;
 int index_of_close_symbol;
 int index_of_open_symbol;
+int previous_index;
 int last_index;
 
 void collect_data(void);
-void divide_into_lines(void);
+void display_lines(void);
 bool are_paired_symbol(void);
 void check_are_paired_symbols_balanced(void);
-void find_pair_for_balanced_symbol(void);
+void add_paired_symbol(void);
 bool is_paired_symbol_balanced(char open_symbol, char close_symbol);
 void delete_balanced_paired_symbols(void);
 bool is_unopened_pair(char close_symbol);
@@ -28,7 +28,7 @@ bool is_unclosed_pair(char open_symbol);
 int main(void)
 {
     collect_data();
-    divide_into_lines();
+    display_lines();
 
     return 0;
 }
@@ -49,7 +49,7 @@ void collect_data(void)
     printf("\n");
 }
 
-void divide_into_lines(void)
+void display_lines(void)
 {
     extern int current_char;
     extern int real_size_of_lines;
@@ -73,104 +73,89 @@ bool are_paired_symbol(void)
     extern char lines_of_chars[];
     extern int current_char;
 
-    return lines_of_chars[current_char] == '(' || lines_of_chars[current_char] == ')' ||
-            lines_of_chars[current_char] == '"' || lines_of_chars[current_char] == '{' ||
-            lines_of_chars[current_char] == '}' || lines_of_chars[current_char] == '[' ||
-            lines_of_chars[current_char] == ']' || lines_of_chars[current_char] == '\'';
+    return  lines_of_chars[current_char] == '(' || lines_of_chars[current_char] == ')'  ||
+            lines_of_chars[current_char] == '"' || lines_of_chars[current_char] == '{'  ||
+            lines_of_chars[current_char] == '}' || lines_of_chars[current_char] == '['  ||
+            lines_of_chars[current_char] == ']' || lines_of_chars[current_char] == '\'' ||
+            lines_of_chars[current_char] == '"';
 }
 
 void check_are_paired_symbols_balanced(void)
 {
-    extern char paired_symbols[];
-    extern int real_size_of_paired_symbols;
     extern char lines_of_chars[];
     extern int current_char;
+    extern int index_of_close_symbol;
+    extern int index_of_open_symbol;
+    extern int last_index;
+    extern int previous_index;
 
-    ++real_size_of_paired_symbols;
-    last_index = real_size_of_paired_symbols - 1;
-    paired_symbols[last_index] = lines_of_chars[current_char];
+    add_paired_symbol();
 
-    find_pair_for_balanced_symbol();
+    previous_index = last_index - 1;
 
-    // TODO: Засунуть код ниже в функцию
-    if (is_unopened_pair(')'))
+    if (is_paired_symbol_balanced('(', ')')   ||
+        is_paired_symbol_balanced('{', '}')   ||
+        is_paired_symbol_balanced('[', ']')   ||
+        is_paired_symbol_balanced('\'', '\'') ||
+        is_paired_symbol_balanced('"', '"'))
+    {
+        index_of_close_symbol = last_index;
+        index_of_open_symbol = previous_index;
+
+        delete_balanced_paired_symbols();
+    }
+
+    else if (is_unopened_pair(')'))
     {
         printf("%c", lines_of_chars[current_char]);
-        printf("\n There is not opened parenthesis");
+        printf("\nThere is not opened parenthesis or order of parentheses is missing");
         exit(1);
     }
 
     else if (is_unopened_pair('}'))
     {
         printf("%c", lines_of_chars[current_char]);
-        printf("\n There is not opened brackets");
+        printf("\nThere is not opened bracket or oder of brackets is missing");
         exit(1);
     }
 
     else if (is_unopened_pair(']'))
     {
         printf("%c", lines_of_chars[current_char]);
-        printf("\n There is not opened braces");
+        printf("\nThere is not opened brace or order of braces is missing");
         exit(1);
     }
 }
 
-void find_pair_for_balanced_symbol(void)
+void add_paired_symbol(void)
 {
-    extern int current_paired_symbol;
     extern int real_size_of_paired_symbols;
-    extern int index_of_close_symbol;
-    extern int index_of_open_symbol;
     extern int last_index;
+    extern char paired_symbols[];
+    extern int current_char;
+    extern char lines_of_chars[];
 
-    // TODO: Добавить ", ' знаки
-    for (current_paired_symbol = 0; current_paired_symbol < real_size_of_paired_symbols; ++current_paired_symbol)
-    {
-        if (is_paired_symbol_balanced('(', ')'))
-        {
-            index_of_close_symbol = last_index;
-            index_of_open_symbol = current_paired_symbol;
-            delete_balanced_paired_symbols();
-
-            return;
-        }
-
-        else if (is_paired_symbol_balanced('{', '}'))
-        {
-            index_of_close_symbol = last_index;
-            index_of_open_symbol = current_paired_symbol;
-            delete_balanced_paired_symbols();
-
-            return;
-        }
-
-        else if (is_paired_symbol_balanced('[', ']'))
-        {
-            index_of_close_symbol = last_index;
-            index_of_open_symbol = current_paired_symbol;
-            delete_balanced_paired_symbols();
-
-            return;
-        }
-    }
+    ++real_size_of_paired_symbols;
+    last_index = real_size_of_paired_symbols - 1;
+    paired_symbols[last_index] = lines_of_chars[current_char];
 }
 
 bool is_paired_symbol_balanced(char open_symbol, char close_symbol)
 {
-    extern char lines_of_chars[];
-    extern int current_char;
     extern char paired_symbols[];
+    extern int last_index;
+    extern int previous_index;
 
-    return lines_of_chars[current_char] == close_symbol && paired_symbols[current_paired_symbol] == open_symbol;
+    return paired_symbols[last_index] == close_symbol && paired_symbols[previous_index] == open_symbol;
 }
 
 void delete_balanced_paired_symbols(void)
 {
     extern int real_size_of_paired_symbols;
     extern char paired_symbols[];
-    int shift;
+    extern int index_of_open_symbol;
+    extern int index_of_close_symbol;
     int i;
-
 
     for (i = index_of_open_symbol; i < real_size_of_paired_symbols; i++) {
         paired_symbols[i] = paired_symbols[i + 1];
@@ -188,10 +173,10 @@ void delete_balanced_paired_symbols(void)
 
 bool is_unopened_pair(char close_symbol)
 {
-    extern char lines_of_chars[];
-    extern int current_char;
+    extern char paired_symbols[];
+    extern int last_index;
 
-    return lines_of_chars[current_char] == close_symbol;
+    return paired_symbols[last_index] == close_symbol;
 }
 
 void check_unclosed_symbols(void)
@@ -203,12 +188,22 @@ void check_unclosed_symbols(void)
 
     else if (is_unclosed_pair('{'))
     {
-        printf("\nThere is not closed brackets\n");
+        printf("\nThere is not closed bracket\n");
     }
 
     else if (is_unclosed_pair('['))
     {
-        printf("\nThere is not closed braces\n");
+        printf("\nThere is not closed brace\n");
+    }
+
+    else if (is_unclosed_pair('\''))
+    {
+        printf("\nThere is not closed quote");
+    }
+
+    else if (is_unclosed_pair('"'))
+    {
+        printf("\nThere is not closed double quote");
     }
 }
 
