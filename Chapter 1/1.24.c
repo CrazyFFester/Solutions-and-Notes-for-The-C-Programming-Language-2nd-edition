@@ -91,8 +91,6 @@ void check_are_paired_symbols_balanced(void)
 
     add_paired_symbol();
 
-    previous_index = last_index - 1;
-
     if (is_paired_symbol_balanced('(', ')')   ||
         is_paired_symbol_balanced('{', '}')   ||
         is_paired_symbol_balanced('[', ']')   ||
@@ -134,10 +132,12 @@ void add_paired_symbol(void)
     extern char paired_symbols[];
     extern int current_char;
     extern char lines_of_chars[];
+    extern int previous_index;
 
     ++real_size_of_paired_symbols;
     last_index = real_size_of_paired_symbols - 1;
     paired_symbols[last_index] = lines_of_chars[current_char];
+    previous_index = last_index - 1;
 }
 
 bool is_paired_symbol_balanced(char open_symbol, char close_symbol)
