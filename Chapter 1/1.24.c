@@ -40,7 +40,9 @@ void collect_data(void)
     extern char lines_of_chars[];
     int c;
 
-    for (current_char = 0; (c = getchar()) != EOF && real_size_of_lines < MAX_CHAR; ++current_char)
+    for (current_char = 0;
+         (c = getchar()) != EOF && real_size_of_lines < MAX_CHAR;
+         ++current_char)
     {
         lines_of_chars[current_char] = c;
         ++real_size_of_lines;
@@ -55,7 +57,8 @@ void display_lines(void)
     extern int real_size_of_lines;
     extern char lines_of_chars[];
 
-    for (current_char = 0; current_char < real_size_of_lines - 1; ++current_char)
+    for (current_char = 0; current_char < real_size_of_lines - 1;
+         ++current_char)
     {
         if (are_paired_symbol())
         {
@@ -73,11 +76,15 @@ bool are_paired_symbol(void)
     extern char lines_of_chars[];
     extern int current_char;
 
-    return  lines_of_chars[current_char] == '(' || lines_of_chars[current_char] == ')'  ||
-            lines_of_chars[current_char] == '"' || lines_of_chars[current_char] == '{'  ||
-            lines_of_chars[current_char] == '}' || lines_of_chars[current_char] == '['  ||
-            lines_of_chars[current_char] == ']' || lines_of_chars[current_char] == '\'' ||
-            lines_of_chars[current_char] == '"';
+    return lines_of_chars[current_char] == '(' ||
+           lines_of_chars[current_char] == ')' ||
+           lines_of_chars[current_char] == '"' ||
+           lines_of_chars[current_char] == '{' ||
+           lines_of_chars[current_char] == '}' ||
+           lines_of_chars[current_char] == '[' ||
+           lines_of_chars[current_char] == ']' ||
+           lines_of_chars[current_char] == '\'' ||
+           lines_of_chars[current_char] == '"';
 }
 
 void check_are_paired_symbols_balanced(void)
@@ -89,11 +96,12 @@ void check_are_paired_symbols_balanced(void)
     extern int last_index;
     extern int previous_index;
 
+    // Adding new symbol to array of paired symbols
     add_paired_symbol();
 
-    if (is_paired_symbol_balanced('(', ')')   ||
-        is_paired_symbol_balanced('{', '}')   ||
-        is_paired_symbol_balanced('[', ']')   ||
+    if (is_paired_symbol_balanced('(', ')') ||
+        is_paired_symbol_balanced('{', '}') ||
+        is_paired_symbol_balanced('[', ']') ||
         is_paired_symbol_balanced('\'', '\'') ||
         is_paired_symbol_balanced('"', '"'))
     {
@@ -106,7 +114,8 @@ void check_are_paired_symbols_balanced(void)
     else if (is_unopened_pair(')'))
     {
         printf("%c", lines_of_chars[current_char]);
-        printf("\nThere is not opened parenthesis or order of parentheses is missing");
+        printf("\nThere is not opened parenthesis or order of parentheses is "
+               "missing");
         exit(1);
     }
 
@@ -146,7 +155,8 @@ bool is_paired_symbol_balanced(char open_symbol, char close_symbol)
     extern int last_index;
     extern int previous_index;
 
-    return paired_symbols[last_index] == close_symbol && paired_symbols[previous_index] == open_symbol;
+    return paired_symbols[last_index] == close_symbol &&
+           paired_symbols[previous_index] == open_symbol;
 }
 
 void delete_balanced_paired_symbols(void)
@@ -157,14 +167,16 @@ void delete_balanced_paired_symbols(void)
     extern int index_of_close_symbol;
     int i;
 
-    for (i = index_of_open_symbol; i < real_size_of_paired_symbols; i++) {
+    for (i = index_of_open_symbol; i < real_size_of_paired_symbols; i++)
+    {
         paired_symbols[i] = paired_symbols[i + 1];
     }
 
     --real_size_of_paired_symbols;
     --index_of_close_symbol;
 
-    for (i = index_of_close_symbol; i < real_size_of_paired_symbols; i++) {
+    for (i = index_of_close_symbol; i < real_size_of_paired_symbols; i++)
+    {
         paired_symbols[i] = paired_symbols[i + 1];
     }
 
