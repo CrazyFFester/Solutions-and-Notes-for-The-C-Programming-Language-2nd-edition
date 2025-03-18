@@ -95,9 +95,7 @@ void check_are_paired_symbols_balanced(void)
     extern int index_of_open_symbol;
     extern int last_index;
     extern int previous_index;
-    // Testing new neovim plugins
 
-    // Adding new symbol to array of paired symbols
     add_paired_symbol();
 
     if (is_paired_symbol_balanced('(', ')') ||
