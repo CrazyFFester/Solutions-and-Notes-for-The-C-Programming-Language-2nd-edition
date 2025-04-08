@@ -9,10 +9,14 @@ clean.
 
 As I go through the chapters of the book, I will not rewrite the codes so that the reader and I have more or less the same knowledge.
 
+All codes are in folder **"Solutions"**, notes are in folder **"Notes"**. Some notes are written in Russian language, so just translate it ;)
+
 If you find bugs, I will be glad to get acquainted with them.
 
+Telegram Channel - t.me/Crazovnik
 
-## Chapters:
+
+## Solutions
 
 ### Chapter 1
 
