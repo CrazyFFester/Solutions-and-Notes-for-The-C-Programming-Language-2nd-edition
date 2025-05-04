@@ -29,3 +29,8 @@ Telegram Channel - t.me/Crazovnik
 | 1.7 Functions                            | [Exercise 1-15](/Solutions/Chapter%201/1.15.c)                                                                                                                                                                                                                                                                                                     |
 | 1.9 Character Arrays                     | [Exercise 1-16](/Solutions/Chapter%201/1.16.c)<br>[Exercise 1-18](/Solutions/Chapter%201/1.18.c)<br>[Exercise 1-19](/Solutions/Chapter%201/1.19.c)                                                                                                                                                                                                 |
 | 1.10 External Variables and Scopes       | [Exercise 1-20](/Solutions/Chapter%201/1.20.c)<br>[Exercise 1-21](/Solutions/Chapter%201/1.21.c)<br>[Exercise 1-22](/Solutions/Chapter%201/1.22.c)<br>[Exercise 1-23](/Solutions/Chapter%201/1.23.c)<br>[Exercise 1-24](/Solutions/Chapter%201/1.24.c)                                                                                             |
+### Chapter 2
+
+| Chapter & Topic    | Exercises                                    |
+| ------------------ | -------------------------------------------- |
+| 2.1 Variable Names | [Exercise 2-1](/Solutions/Chapter%202/2.1.c) |
