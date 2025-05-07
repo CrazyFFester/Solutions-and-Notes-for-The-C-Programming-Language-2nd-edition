@@ -15,4 +15,6 @@ int main()
     s[i] = '\0';
 
     printf("%s\n",s);
+
+    return 0;
 }
