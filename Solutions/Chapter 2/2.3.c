@@ -3,6 +3,7 @@
  * 2) delete global variable and define it in function
  * 3) rename variable and function if it needs
  * 4) make htoi return int (output) value and print result in main function
+ * 5) read more about char ;))
 */
 
 #include <stdio.h>
