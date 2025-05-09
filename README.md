@@ -20,7 +20,7 @@ Telegram Channel - t.me/Crazovnik
 
 ### Chapter 1
 
-| Chapter & Topic                          | Exercises                                                                                                                                                                                                                                                                                                                                          |
+| Topic                                    | Exercises                                                                                                                                                                                                                                                                                                                                          |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1.2 Variables and Arithmetic Expressions | [Exercise 1-3](/Solutions/Chapter%201/1.3.c)<br>[Exercise 1-4](/Solutions/Chapter%201/1.4.c)                                                                                                                                                                                                                                                       |
 | 1.3 The For Statement                    | [Exercise 1-5](/Solutions/Chapter%201/1.5.c)                                                                                                                                                                                                                                                                                                       |
@@ -31,7 +31,7 @@ Telegram Channel - t.me/Crazovnik
 | 1.10 External Variables and Scopes       | [Exercise 1-20](/Solutions/Chapter%201/1.20.c)<br>[Exercise 1-21](/Solutions/Chapter%201/1.21.c)<br>[Exercise 1-22](/Solutions/Chapter%201/1.22.c)<br>[Exercise 1-23](/Solutions/Chapter%201/1.23.c)<br>[Exercise 1-24](/Solutions/Chapter%201/1.24.c)                                                                                             |
 ### Chapter 2
 
-| Chapter & Topic                      | Exercises                                      |
+| Topic                                | Exercises                                      |
 | ------------------------------------ | ---------------------------------------------- |
 | 2.1 Variable Names                   | [Exercise 2-1](/Solutions/Chapter%202/2.1.c)   |
 | 2.6 Relational and Logical Operators | [Exercise 2-2](/Solutions/Chapter%202/2.2.c)   |
