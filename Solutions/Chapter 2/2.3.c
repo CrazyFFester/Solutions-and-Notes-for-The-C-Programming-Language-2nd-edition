@@ -1,56 +1,64 @@
-/* TODO:
- * 1) Make code cleaner
- * 2) delete global variable and define it in function
- * 3) rename variable and function if it needs
- * 4) make htoi return int (output) value and print result in main function
- * 5) read more about char ;))
-*/
-
 #include <stdio.h>
 
 #define MAX_LENGTH 100
 
-int length_of_string;
-
-void htoi(char[]);
-void calculate_length(const char[]);
+int htoi(char[]);
+int calculate_length(const char[]);
 char hex_char_to_int(char);
-int ipow(int, int);
+int int_pow(int, int);
+int remove_id_chars(int);
+int calculate_exp_for_hex_number(int, int);
 
 int main() {
     char string[MAX_LENGTH] = "0x1A3F";
 
-    calculate_length(string);
-    htoi(string);
-
-    printf("\n");
+    printf("%d\n", htoi(string));  // Convert hexadecimal string to decimal and print result
 
     return 0;
 }
 
-void htoi(char s[]) {
+int htoi(char s[]) {
     int output;
     int real_length_of_string;
+    int length_of_string;
     int digit;
+    int numeral_system;
 
     output = 0;
-    real_length_of_string = length_of_string - 2;
 
+    // Calculate total length of the string
+    length_of_string = calculate_length(s);
+
+    // Adjust for "0x" prefix (subtract 2 characters)
+    real_length_of_string = remove_id_chars(length_of_string);
+
+    numeral_system = 16;
+
+    // Start from index 2 to skip "0x" and process each hex digit
     for (int i = 2; i < length_of_string; ++i) {
         digit = hex_char_to_int(s[i]);
-        output += (int)(digit * ipow(16, (real_length_of_string - 1) - (i - 2)));
+
+        // Multiply digit by the appropriate power of 16 based on its position
+        output += digit * int_pow(numeral_system,
+                                  calculate_exp_for_hex_number(real_length_of_string, i));
     }
 
-    printf("%d", output);
+    return output;
 }
 
-void calculate_length(const char string[]) {
+int calculate_length(const char string[]) {
+    int length_of_string;
+
+    // Manually compute string length up to MAX_LENGTH
     for (length_of_string = 0; length_of_string < MAX_LENGTH && string[length_of_string] != '\0';
          ++length_of_string) {
     }
+
+    return length_of_string;
 }
 
 char hex_char_to_int(char c) {
+    // Convert a hexadecimal character (0-9, A-F, a-f) to its integer value
     if (c >= '0' && c <= '9') {
         return c - '0';
     }
@@ -61,18 +69,27 @@ char hex_char_to_int(char c) {
         return c - 'a' + 10;
     }
     else {
-        return -1;
+        return -1;  // Invalid hex character
     }
 }
 
-int ipow(int base, int exp) {
-    int result;
+int int_pow(int base, int exp) {
+    int result = 1;
 
-    result = 1;
-
+    // Simple integer exponentiation: base raised to exp
     while (exp--) {
         result *= base;
     }
 
     return result;
+}
+
+int remove_id_chars(int length_of_string) {
+    // Remove length of "0x" prefix (2 characters)
+    return length_of_string - 2;
+}
+
+int calculate_exp_for_hex_number(int real_length_of_string, int i) {
+    // Calculate exponent for digit at position i (accounting for skipped "0x")
+    return (real_length_of_string - 1) - (i - 2);
 }
