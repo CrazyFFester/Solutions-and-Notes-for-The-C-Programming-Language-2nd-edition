@@ -29,12 +29,10 @@ int main() {
 }
 
 void squeeze(char s1[], char s2[]) {
-    int i, j;
-
     // Outer loop over each character in s2
-    for (i = 0; s2[i] != '\0'; ++i) {
+    for (int i = 0; s2[i] != '\0'; ++i) {
         // Inner loop over s1 — we search for any match with s2[i]
-        for (j = 0; s1[j] != '\0'; ++j) {
+        for (int j = 0; s1[j] != '\0'; ++j) {
             if (s1[j] == s2[i]) {
                 // If match found, delete the character from s1
                 delete_char(s1, j);
