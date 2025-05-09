@@ -35,4 +35,4 @@ Telegram Channel - t.me/Crazovnik
 | ---------------------------------- | ---------------------------------------------- |
 | 2.1 Variable Names                 | [Exercise 2-1](/Solutions/Chapter%202/2.1.c)   |
 | 2.6 Relational and Logical Operators | [Exercise 2-2](/Solutions/Chapter%202/2.2.c) |
-| 2.7 Type Conversions              | [Exercise 2-3](/Solutions/Chapter%202/2.3.c) _(Pre-final version)_ |
+| 2.7 Type Conversions              | [Exercise 2-3](/Solutions/Chapter%202/2.3.c)|
