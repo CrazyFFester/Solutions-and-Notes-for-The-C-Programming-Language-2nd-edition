@@ -37,4 +37,4 @@ Telegram Channel - t.me/Crazovnik
 | 2.6 Relational and Logical Operators  | [Exercise 2-2](/Solutions/Chapter%202/2.2.c)                                                  |
 | 2.7 Type Conversions                  | [Exercise 2-3](/Solutions/Chapter%202/2.3.c)                                                  |
 | 2.8 Increment and Decrement Operators | [Exercise 2-4](/Solutions/Chapter%202/2.4.c) <br>[Exercise 2-5](/Solutions/Chapter%202/2.5.c) |
-| 2.9 Bitwise Operators                 | [Exercise 2-6](/Solutions/Chapter%202/2.6.c)                                                  |
+| 2.9 Bitwise Operators                 | [Exercise 2-6](/Solutions/Chapter%202/2.6.c)<br>[Exercise 2-7](/Solutions/Chapter%202/2.7.c)  |
