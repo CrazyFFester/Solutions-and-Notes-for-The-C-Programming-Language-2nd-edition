@@ -2,7 +2,7 @@
 
 unsigned int setbits(unsigned int x, int p, int n, unsigned int y);
 unsigned int create_clearing_mask(int p, int n);
-unsigned int prepare_y_bits(int p, int n, unsigned int y);
+unsigned int invert_segment(int p, int n, unsigned int y);
 
 int main() {
   unsigned int x = 181; // 10110101
@@ -33,7 +33,7 @@ int main() {
 unsigned int setbits(unsigned int x, int p, int n, unsigned int y) {
   unsigned int clearing_mask = create_clearing_mask(p, n);
   unsigned int cleared_x = x & clearing_mask;
-  unsigned int y_segment = prepare_y_bits(p, n, y);
+  unsigned int y_segment = invert_segment(p, n, y);
 
   // Since the target area in cleared_x is all zeros, the OR operation acts as
   // an insertion.
@@ -62,7 +62,7 @@ unsigned int create_clearing_mask(int p, int n) {
  * position p.
  * @return The bits from y, ready for insertion.
  */
-unsigned int prepare_y_bits(int p, int n, unsigned int y) {
+unsigned int invert_segment(int p, int n, unsigned int y) {
   unsigned int extraction_mask = (1 << n) - 1;
   unsigned int extracted_bits = y & extraction_mask;
   int shift_amount = p - n + 1;
