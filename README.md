@@ -31,10 +31,11 @@ Telegram Channel - t.me/Crazovnik
 | 1.10 External Variables and Scopes       | [Exercise 1-20](/Solutions/Chapter%201/1.20.c)<br>[Exercise 1-21](/Solutions/Chapter%201/1.21.c)<br>[Exercise 1-22](/Solutions/Chapter%201/1.22.c)<br>[Exercise 1-23](/Solutions/Chapter%201/1.23.c)<br>[Exercise 1-24](/Solutions/Chapter%201/1.24.c)                                                                                             |
 ### Chapter 2
 
-| Topic                                 | Exercises                                                                                                                                    |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 2.1 Variable Names                    | [Exercise 2-1](/Solutions/Chapter%202/2.1.c)                                                                                                 |
-| 2.6 Relational and Logical Operators  | [Exercise 2-2](/Solutions/Chapter%202/2.2.c)                                                                                                 |
-| 2.7 Type Conversions                  | [Exercise 2-3](/Solutions/Chapter%202/2.3.c)                                                                                                 |
-| 2.8 Increment and Decrement Operators | [Exercise 2-4](/Solutions/Chapter%202/2.4.c) <br>[Exercise 2-5](/Solutions/Chapter%202/2.5.c)                                                |
-| 2.9 Bitwise Operators                 | [Exercise 2-6](/Solutions/Chapter%202/2.6.c)<br>[Exercise 2-7](/Solutions/Chapter%202/2.7.c)<br>[Exercise 2-8](/Solutions/Chapter%202/2.8.c) |
+| Topic                                     | Exercises                                                                                                                                    |
+| ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2.1 Variable Names                        | [Exercise 2-1](/Solutions/Chapter%202/2.1.c)                                                                                                 |
+| 2.6 Relational and Logical Operators      | [Exercise 2-2](/Solutions/Chapter%202/2.2.c)                                                                                                 |
+| 2.7 Type Conversions                      | [Exercise 2-3](/Solutions/Chapter%202/2.3.c)                                                                                                 |
+| 2.8 Increment and Decrement Operators     | [Exercise 2-4](/Solutions/Chapter%202/2.4.c) <br>[Exercise 2-5](/Solutions/Chapter%202/2.5.c)                                                |
+| 2.9 Bitwise Operators                     | [Exercise 2-6](/Solutions/Chapter%202/2.6.c)<br>[Exercise 2-7](/Solutions/Chapter%202/2.7.c)<br>[Exercise 2-8](/Solutions/Chapter%202/2.8.c) |
+| 2.10 Assignment Operators and Expressions | [Exercise 2-9](/Solutions/Chapter%202/2.9.c)                                                                                                 |
