@@ -62,12 +62,14 @@ static void reverse(char s[])
     {
         return;
     }
+
     right--; // Point to the last character, not the null terminator.
 
     while (left < right)
     {
         // Swap characters from both ends, moving towards the center.
         char tmp = s[left];
+
         s[left++] = s[right];
         s[right--] = tmp;
     }
